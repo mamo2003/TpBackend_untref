@@ -1,9 +1,9 @@
 const router = require("express").Router();
 
-const routerprod = require("./products");
+const ProductRouter= require("./products");
 
 
-router.use("/super", routerprod);
+router.use("/super", ProductRouter);
 
 
-module.exports= routerprod;
+module.exports= router;
