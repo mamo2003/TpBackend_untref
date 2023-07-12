@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const router = require("./products");
+const routerprod = require("./products");
 
 
-router.use("/super", router);
+router.use("/super", routerprod);
