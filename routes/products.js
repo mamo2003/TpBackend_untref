@@ -1,6 +1,6 @@
 const { ErrorPage } = require("../controllers/ErrorPAge");
 const { SearchCode } = require("../controllers/SearchCode");
-const { DeleteCode } = require("./controllers/DeleteCode");
+const { DeleteCode } = require("../controllers/DeleteCode");
 const { Super } = require("../controllers/super");
 const { createCode } = require("../controllers/createCode");
 const { changeCode } = require("../controllers/changeCode");
