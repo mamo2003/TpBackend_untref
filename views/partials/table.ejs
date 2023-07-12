@@ -1,0 +1,25 @@
+    <body>
+    <h1><%= listado de Articulos %></h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">codigo</th>
+            <th scope="col">nombre</th>
+            <th scope="col">precio</th>
+            <th scope="col">categoria</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% if  ( --await art.length > 0) { %>
+            <%--await  art.forEach((supermercado) => { %>
+                <tr>
+                    <th scope="row"><%= art.codigo %></th>
+                    <td><%= art.nombre %> </td>
+                    <td><%= art.precio %></td>
+                    <td><%= art.categoria %></td>
+                    </tr>
+            <% }) %>
+        <% } %>
+        </tbody>
+    </table>
+    </body>

@@ -1,0 +1,20 @@
+{
+  "name": "supermercado_p_integrador",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador Supermercado",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Grupo Cinco",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "nodemon": "^2.0.22"
+  }
+}
