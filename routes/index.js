@@ -4,3 +4,6 @@ const routerprod = require("./products");
 
 
 router.use("/super", routerprod);
+
+
+module.exports= routerprod;
