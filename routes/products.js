@@ -1,10 +1,10 @@
-const { ErrorPage } = require("./controllers/ErrorPage");
-const { SearchCode } = require("./controllers/SearchCode");
+const { ErrorPage } = require("../controllers/ErrorPAge");
+const { SearchCode } = require("../controllers/SearchCode");
 const { DeleteCode } = require("./controllers/DeleteCode");
-const { Super } = require("./controllers/super");
-const { createCode } = require("./controllers/createCode");
-const { changeCode } = require("./controllers/changeCode");
-const { SearchCat } = require("./controllers/SearchCat");
+const { Super } = require("../controllers/super");
+const { createCode } = require("../controllers/createCode");
+const { changeCode } = require("../controllers/changeCode");
+const { SearchCat } = require("../controllers/SearchCat");
 
 const router = require('express').Router();
 
