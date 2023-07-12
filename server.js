@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv= require('dotenv').config();
 const path = require('path');
 const { HomePage } = require('./controllers/HomePage');
-
+const {routerProd} = require('./routes/index')
 const app= express();
 const PORT = process.env.PORT || 3000;
 
@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 3000;
   next();
 });  */
 app.set("view engine", "ejs");
+
 app.use(express.static(path.join(__dirname, "public")));
+
+
 
 app.get('/', HomePage);
 
