@@ -9,8 +9,10 @@ h3 {padding: 10px;
 
 h5 {padding: 10px;
     text-align: center;}
+    
+.navbar-nav{text-align: center;}
 
-
+.footer{text-align: center;}
 
 /*======================
     404 page
