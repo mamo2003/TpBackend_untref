@@ -24,6 +24,6 @@ router.put("/:id", changeCode);
 
 router.delete("/:id", DeleteCode);
 
-router.get("*", ErrorPage);
+router.get("/*", ErrorPage);
 
 module.exports = router;
