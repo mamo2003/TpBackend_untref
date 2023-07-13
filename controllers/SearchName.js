@@ -8,15 +8,15 @@ async function SearchName(req, res) {
     res.status(500).send("error al conectar a la base mongo DB");
     return;
   }
-  const regex = new RegExp(superName.toLowerCase(), "i");
+  const ReName = superName.charAt(0).toUpperCase() + superName.slice(1);
   const db = client.db("supermercado");
-  const cat = await db.collection("supermercado").find({ categoria: regex }).toArray();
+  const Nam = await db.collection("supermercado").find({ nombre: ReName }).toArray();
   await disconnectFromMongoDB();
-  !cat
+  !Nam
     ? res
         .status(404)
-        .send(`no es posible encontrar un producto en esta categoria: ${regex}, intentalo nuevamente`)
-    : res.send(cat);
+        .send(`no es posible encontrar un producto en esta categoria: ${ReName}, intentalo nuevamente`)
+    : res.send(Nan);
 }
 
 module.exports = { SearchName};

@@ -1,16 +1,15 @@
 const { connectToMongoDB, disconnectFromMongoDB } = require("../config/db.js");
 
 async function SearchCat(req, res) {
-  const superCat = (req.params.categoria);
-  console.log(superCat);
+  const superCat = req.params.categoria;
   const client = await connectToMongoDB();
   if (!client) {
     res.status(500).send("error al conectar a la base mongo DB");
     return;
   }
-  const regex = new RegExp(superCat.toLowerCase(), "i");
+  const Recat = superCat.charAt(0).toUpperCase() + superCat.slice(1);
   const db = client.db("supermercado");
-  const cat = await db.collection("supermercado").find({ categoria: regex });
+  const cat = await db.collection("supermercado").find({ categoria: Recat }).toArray();
   await disconnectFromMongoDB();
   !cat
     ? res
