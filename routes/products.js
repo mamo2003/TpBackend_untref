@@ -14,9 +14,9 @@ router.get("/", Super);
 
 router.get("/:id", SearchCode);
 
-router.get("/:categoria", SearchCat);
+router.get("/categoria/:categoria", SearchCat);
 
-router.get("/:nombre", SearchName);
+router.get("/nombre/:nombre", SearchName);
 
 router.post("/", createCode);
 
