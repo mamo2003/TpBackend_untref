@@ -1,25 +1,20 @@
 const { connectToMongoDB, disconnectFromMongoDB } = require("../config/db.js");
 async function changeCode (req, res) {
     const codigo = req.params.id;
-    const nuevosDatos = req.body;
-    console.log('====================================');
-    console.log(nuevosDatos);
-    console.log('====================================');
-
-    if (!nuevosDatos) {
+    const nuevoDato = req.Body;
+    console.log(nuevoDato);
+    if (!nuevoDato) {
     res.status(400).send("error de formato recibido para nuevos datos");
-    }
-
+    };
     const client = await connectToMongoDB();
     if (!client) {
     res.status(500).send("erro al conectarse a mongoDB");
     }
-
     const collection = client.db("supermercado").collection("supermercado");
-    collection.updateOne({ codigo: parseInt(codigo) }, { $set: nuevosDatos })
+    collection.updateOne({codigo: parseInt(codigo)},{$set: nuevoDato })
     .then(() => {
         console.log("articulo modificado");
-        res.status(200).send(nuevosDatos);
+        res.status(200).send(nuevoDato);
     })
     .catch((error) => {
         res.status(500).json({ descripcion: "error al modificar el articulo" });
