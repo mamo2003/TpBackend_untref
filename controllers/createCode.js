@@ -1,8 +1,8 @@
 
-const {connectToMongoDB, disconnectFromMongoDB} = require ('../config/db.js')
+const {connectToMongoDB, disconnectFromMongoDB} = require ('../config/db.js');
 async function createCode  (req, res)  {
 const articuloNuevo = req.body;
-
+console.log(articuloNuevo);
 if (articuloNuevo === undefined) {
     res.status(400).send("error de formato al crearlo");
 }
@@ -13,8 +13,7 @@ if (!client) {
 }
 
     const collection = client.db("supermercado").collection("supermercado");
-    collection
-    .insertOne(articuloNuevo)
+    collection.insertOne(articuloNuevo)
     .then(() => {
         console.log("se ha creado un nuevo articulo ");
         res.status(201).send(articuloNuevo);
