@@ -1,3 +1,6 @@
+
+
+const { connectToMongoDB, disconnectFromMongoDB } = require("../config/db.js");
 async function changeCode (req, res) {
     const codigo = req.params.id;
     const nuevosDatos = req.body;

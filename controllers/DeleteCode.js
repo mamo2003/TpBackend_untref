@@ -9,8 +9,7 @@ async function DeleteCode(req, res) {
     if (!client) {
         return res.status(500).send("error al conectar a monogDB");
     }
-    client
-        .connect()
+    client.connect()
         .then(() => {
             const collection = client.db("supermercado").collection("supermercado");
             return collection.deleteOne({ codigo: parseInt(Code) });
