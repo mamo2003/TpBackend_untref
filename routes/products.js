@@ -1,4 +1,4 @@
-const { ErrorPage } = require("../controllers/ErrorPAge");
+/*const { ErrorPage } = require("../controllers/ErrorPAge");*/
 const { SearchCode } = require("../controllers/SearchCode");
 const { DeleteCode } = require("../controllers/DeleteCode");
 const { Super } = require("../controllers/super");
@@ -24,6 +24,6 @@ router.put("/:id", changeCode);
 
 router.delete("/:id", DeleteCode);
 
-router.get("/*", ErrorPage);
+/* router.get("/*", ErrorPage); */
 
 module.exports = router;
