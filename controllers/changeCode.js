@@ -1,9 +1,10 @@
-
-
 const { connectToMongoDB, disconnectFromMongoDB } = require("../config/db.js");
 async function changeCode (req, res) {
     const codigo = req.params.id;
     const nuevosDatos = req.body;
+    console.log('====================================');
+    console.log(nuevosDatos);
+    console.log('====================================');
 
     if (!nuevosDatos) {
     res.status(400).send("error de formato recibido para nuevos datos");
@@ -15,8 +16,7 @@ async function changeCode (req, res) {
     }
 
     const collection = client.db("supermercado").collection("supermercado");
-    collection
-    .updateOne({ codigo: parseInt(codigo) }, { $set: nuevosDatos })
+    collection.updateOne({ codigo: parseInt(codigo) }, { $set: nuevosDatos })
     .then(() => {
         console.log("articulo modificado");
         res.status(200).send(nuevosDatos);
