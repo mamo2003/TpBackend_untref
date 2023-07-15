@@ -7,12 +7,13 @@ const routes = require('./routes');
 const app= express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(express.json()); 
 
 app.use((req, res, next) => {
   res.header('Content-Type', 'application/json; charset=utf-8');
   next();
 });   
+
 
 app.use("/api", routes);
 

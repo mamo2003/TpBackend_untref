@@ -17,9 +17,7 @@ async function SearchCat(req, res) {
   !cat
     ? res
       .status(404)
-      .send(
-        `no es posible encontrar un producto en esta categoria: ${categoria}, intentalo nuevamente`
-      )
+      .send(`no es posible encontrar un producto en esta categoria: ${categoria}, intentalo nuevamente`)
     : res.send(cat);
 }
 
