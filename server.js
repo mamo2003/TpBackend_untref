@@ -8,18 +8,18 @@ const routes = require('./routes');
 const app= express();
 const PORT = process.env.PORT || 3000;
 
-app.use("/api", routes);
+app.use(express.json()); 
+
+/* app.use((req, res, next) => {
+  res.header("Content-Type", "application/json; charset=utf-8");
+  next();
+});     */
 
 app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname, "public"))); 
+/* app.use(express.static(path.join(__dirname, "public")));  */
 
-app.use(express.json()); 
-
-app.use((req, res, next) => {
-  res.header('Content-Type', 'application/json; charset=utf-8');
-  next();
-});   
+app.use("/api", routes);
 
 app.get('/', HomePage);
 
