@@ -13,11 +13,11 @@ app.use(express.json());
 /* app.use((req, res, next) => {
   res.header("Content-Type", "application/json; charset=utf-8");
   next();
-});     */
+});       */
 
 app.set("view engine", "ejs");
 
-/* app.use(express.static(path.join(__dirname, "public")));  */
+/* app.use(express.static(path.join(__dirname+ "/public"))); */  
 
 app.use("/api", routes);
 
