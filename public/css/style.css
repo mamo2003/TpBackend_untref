@@ -31,10 +31,13 @@ ul.navbar-nav{justify-content: space-between !important;padding-right:10rem;marg
     404 page
 =======================*/
 
-.page_404{ padding:40px 0; background:#fffefe; font-family: 'Arvo', serif;
+.page_404{ padding:40px 0; background: #FAFDFF;
+background: -moz-linear-gradient(top, #FAFDFF 0%, #3E93CB 75%, #2D5675 100%);
+background: -webkit-linear-gradient(top, #FAFDFF 0%, #3E93CB 75%, #2D5675 100%);
+background: linear-gradient(to bottom, #FAFDFF 0%, #3E93CB 75%, #2D5675 100%);; font-family: 'Arvo', serif;
 }
 
-.page_404  img{ width:70%;}
+.page_404  img{ width:80%;}
 
 .four_zero_four_bg{
 
@@ -44,7 +47,7 @@ ul.navbar-nav{justify-content: space-between !important;padding-right:10rem;marg
 } */
 
 .four_zero_four_bg h1{
-font-size:80px;
+font-size:60px;
 }
 
 .four_zero_four_bg h3{
@@ -53,8 +56,9 @@ font-size:80px;
 .link_404{			 
 	color: #fff!important;
     padding: 100px 5px;
-    background: #39ac31;
+    background: #240a11;
     margin: 20px 0;
     display: inline-block;}
-	.contant_box_404{ margin-top:-40px;}
+	.contant_box_404{ margin-top:-20px;
+}
 }
