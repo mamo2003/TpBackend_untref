@@ -1,16 +1,17 @@
 main{background-color: rgb(243, 99, 166);
+    height: 100%;
 }
 
 h1 {text-align: center;
-padding-bottom: 200px;}
+padding-bottom: 15px;}
 
 h3 {padding: 10px;
     text-align: center;}
 
 h5 {padding: 10px;
     text-align: center;}
-
-.navbar-nav{text-align: center;}
+section{padding-top: 70px;}
+.navbar-nav{align-items: center;}
 
 .footer{text-align: center;}
 
