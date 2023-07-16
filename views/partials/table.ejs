@@ -11,12 +11,12 @@
         </thead>
         <tbody>
             <tr>
-    <%-  Art.map((Art)=>{  %>
-        <td scope="row"><%= Art.codigo %></td>
-            <td ><%= Art.nombre %></td>
-            <td ><%= Art.precio %></td>
-            <td ><%= Art.categoria %></td>
-    <% }) %>
+    <%  for(var ar of Art) {  %>
+        <td scope="row"><%= ar.codigo %></td>
+            <td ><%= ar.nombre %></td>
+            <td ><%= ar.precio %></td>
+            <td ><%= ar.categoria %></td>
+    <% } %>
         </tbody>
     </table>
     </section>
