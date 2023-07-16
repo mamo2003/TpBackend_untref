@@ -14,7 +14,7 @@ app.use(express.json());
   res.header("Content-Type", "application/json; charset=utf-8");
   next();
 });       */
-/* app.set('views',path.join(__dirname,'/views')); */
+app.set('views',path.join(__dirname,'/views')); 
 app.use(express.static(path.join(__dirname , "public")));
 
 app.set('view engine', 'ejs');

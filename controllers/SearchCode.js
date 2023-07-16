@@ -16,7 +16,7 @@ async function SearchCode (req, res) {
         .send(
           `no es posible encontrar un producto con el codigo: ${superId}, intentalo nuevamente`
         )
-    : res.send(Super);
+    : res.render('pages/super',{Super: Super});
 };
 
 module.exports={SearchCode}

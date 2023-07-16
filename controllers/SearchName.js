@@ -12,13 +12,13 @@ async function SearchName(req, res) {
   const name = lowerName[0].toUpperCase() + lowerName.substring(1);
   console.log(name);
   const db = client.db("supermercado");
-  const Nam = await db.collection("supermercado").find({ nombre: name }).toArray();
+  const Super = await db.collection("supermercado").find({ nombre: name }).toArray();
   await disconnectFromMongoDB();
-  !Nam
+  !Super
     ? res
         .status(404)
         .send(`no es posible encontrar un producto en esta categoria: ${name}, intentalo nuevamente`)
-    : res.send(Nam);
+    : res.render('pages/super', {Super:Super});
 }
 
 module.exports = { SearchName};

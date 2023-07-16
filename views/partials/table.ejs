@@ -10,13 +10,13 @@
         </tr>
         </thead>
         <tbody>
-        <% if  (  art.length > 0) { %>
-            <% art.forEach((supermercado) => { %>
+        <% if  (  resultado.length > 0) { %>
+            <% resultado.forEach((Super) => { %>
                 <tr>
-                    <th scope="row"><%= art.codigo %></th>
-                    <td><%= art.nombre %> </td>
-                    <td><%= art.precio %></td>
-                    <td><%= art.categoria %></td>
+                    <th scope="row"><%= resultado.codigo %></th>
+                    <td><%= resultado.nombre %> </td>
+                    <td><%= resultado.precio %></td>
+                    <td><%= resultado.categoria %></td>
                     </tr>
             <% }) %>
         <% } %>
