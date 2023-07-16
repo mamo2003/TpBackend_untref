@@ -10,14 +10,13 @@
         </tr>
         </thead>
         <tbody>
-            <% Art.forEach((Art) => { %>
-                <tr>
-                    <th scope="row"><%= Art.codigo %></th>
-                    <td><%= Art.nombre %> </td>
-                    <td><%= Art.precio %></td>
-                    <td><%= Art.categoria %></td>
-                    </tr>
-            <% }) %>
+            <tr>
+    <%-  Art.map((Art)=>{  %>
+        <td scope="row"><%= Art.codigo %></td>
+            <td ><%= Art.nombre %></td>
+            <td ><%= Art.precio %></td>
+            <td ><%= Art.categoria %></td>
+    <% }) %>
         </tbody>
     </table>
     </section>
