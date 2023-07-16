@@ -10,16 +10,14 @@
         </tr>
         </thead>
         <tbody>
-        <% if  (  Super.length > 0) { %>
-            <% Super.forEach((Super) => { %>
+            <% Art.forEach((Art) => { %>
                 <tr>
-                    <th scope="row"><%= Super.codigo %></th>
-                    <td><%= Super.nombre %> </td>
-                    <td><%= Super.precio %></td>
-                    <td><%= Super.categoria %></td>
+                    <th scope="row"><%= Art.codigo %></th>
+                    <td><%= Art.nombre %> </td>
+                    <td><%= Art.precio %></td>
+                    <td><%= Art.categoria %></td>
                     </tr>
             <% }) %>
-        <% } %>
         </tbody>
     </table>
     </section>
