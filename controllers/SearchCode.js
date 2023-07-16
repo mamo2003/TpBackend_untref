@@ -8,15 +8,15 @@ async function SearchCode (req, res) {
     return;
   }
   const db = client.db("supermercado");
-  const Super = await db.collection("supermercado").findOne({ codigo: superId });
+  const Art= await db.collection("supermercado").findOne({ codigo: superId });
   await disconnectFromMongoDB();
-  !Super
+  !Art
     ? res
         .status(404)
         .send(
           `no es posible encontrar un producto con el codigo: ${superId}, intentalo nuevamente`
         )
-    : res.render('pages/super',{Super: Super});
+    : res.render("pages/super", { Art: JSON.stringify(Art) });
 };
 
 module.exports={SearchCode}

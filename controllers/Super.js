@@ -6,9 +6,9 @@ async function Super(req, res) {
     return;
   }
   const db = client.db("supermercado");
-  const Super = await db.collection("supermercado").find().toArray();
+  const Art= await db.collection("supermercado").find().toArray();
   await disconnectFromMongoDB();
-  res.render('pages/super',{Super:Super}); 
+  res.render("pages/super", { Art: JSON.stringify(Art) }); 
 }
 
 module.exports = { Super };

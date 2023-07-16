@@ -12,13 +12,15 @@ async function SearchCat(req, res) {
   const categoria= lowerCategoria[0].toUpperCase() + lowerCategoria.substring(1);
   console.log(categoria);
   const db = client.db("supermercado");
-  const Super= await db.collection("supermercado").find({ categoria:categoria}).toArray();
+  const Art= await db.collection("supermercado").find({ categoria:categoria}).toArray();
   await disconnectFromMongoDB();
-  !Super
+  !Art
     ? res
-      .status(404)
-      .send(`no es posible encontrar un producto en esta categoria: ${categoria}, intentalo nuevamente`)
-    : res.render('pages/super',{Super:Super});
+        .status(404)
+        .send(
+          `no es posible encontrar un producto en esta categoria: ${categoria}, intentalo nuevamente`
+        )
+    : res.render("pages/super", { Art: JSON.stringify(Art) });
 }
 
 module.exports = { SearchCat };

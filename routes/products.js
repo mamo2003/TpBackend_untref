@@ -1,7 +1,7 @@
 const { ErrorPage2 } = require("../controllers/ErrorPage2");
 const { SearchCode } = require("../controllers/SearchCode");
 const { DeleteCode } = require("../controllers/DeleteCode");
-const { Super } = require("../controllers/super");
+const { Super } = require("../controllers/Super");
 const { createCode } = require("../controllers/createCode");
 const { changeCode } = require("../controllers/changeCode");
 const { SearchCat } = require("../controllers/SearchCat");
