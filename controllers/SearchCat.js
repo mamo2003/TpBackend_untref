@@ -10,7 +10,7 @@ async function SearchCat(req, res) {
   }
   const lowerCategoria = superCat.toLowerCase();
   const categoria= lowerCategoria[0].toUpperCase() + lowerCategoria.substring(1);
-  console.log(categoria);
+  console.log(categoria); 
   const db = client.db("supermercado");
   const Art= await db.collection("supermercado").find({ categoria:categoria}).toArray();
   await disconnectFromMongoDB();

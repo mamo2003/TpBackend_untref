@@ -8,11 +8,14 @@ async function SearchName(req, res) {
     res.status(500).send("error al conectar a la base mongo DB");
     return;
   }
-  const lowerName =superName.toLowerCase();
-  const name = lowerName[0].toUpperCase() + lowerName.substring(1);
-  console.log(name);
+/*   const lowerName =superName.toLowerCase();
+  const name = lowerName[0].toUpperCase() + lowerName.substring(1); 
+  console.log(name);*/
   const db = client.db("supermercado");
-  const Art = await db.collection("supermercado").find({ nombre: name }).toArray();
+  const Art = await db
+    .collection("supermercado")
+    .find({ nombre: { $regex: superName, $options: "i" } })
+    .toArray();
   console.log(JSON.stringify(Art));
   await disconnectFromMongoDB();
   !Art
