@@ -1,12 +1,12 @@
 <div class = "container">
-    <div class="row">
+    <div class="row justify-content-between">
                 <%  Art.map ((A) =>{ %>
-                    <div class="card">
-                            <div class="card-body">
-                                <p><%- A.nombre  %></p>
-                                <p>nombre: <%- A.nombre  %></p>
-                                <p>precio: <%- A.precio %></p>
-                                <p>categoria: <%- A.categoria  %></p>
+                    <div class="card"style="width:11rem">
+                            <div class="card-body"style="height:13rem">
+                                <p><b>codigo:</b><%- A.codigo %></p>
+                                <p><b>nombre:</b><%- A.nombre %></p>
+                                <p><b>precio:</b><%- A.precio %></p>
+                                <p><b>categoria:</b><%- A.categoria %></p>
                             </div>
                     </div>
                     <% }) %>

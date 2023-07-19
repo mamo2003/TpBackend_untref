@@ -24,7 +24,7 @@ async function SearchName(req, res) {
         .send(
           `no es posible encontrar un producto en esta categoria: ${superName}, intentalo nuevamente`
         )
-    : res.render("pages/table", { Art: Art });
+    : res.render("pages/table", { Art : Art });
 }
 
 module.exports = { SearchName};
