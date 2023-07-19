@@ -21,10 +21,10 @@ async function SearchName(req, res) {
   !Art
     ? res
         .status(404)
-        .send(
-          `no es posible encontrar un producto en esta categoria: ${superName}, intentalo nuevamente`
-        )
-    : res.render("pages/table", { Art : Art });
+        .render("pages/err2", {
+          noname: `no es posible encontrar un producto con este nombre: ${superName}, intentalo nuevamente`
+        })
+    : res.render("pages/table", { Art: Art });
 }
 
 module.exports = { SearchName};
