@@ -1,22 +1,11 @@
-    <section>
-    <h1><%= listado de Articulos %></h1>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">codigo</th>
-            <th scope="col">nombre</th>
-            <th scope="col">precio</th>
-            <th scope="col">categoria</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-    <%  for(var ar of Art) {  %>
-        <td scope="row"><%= ar.codigo %></td>
-            <td ><%= ar.nombre %></td>
-            <td ><%= ar.precio %></td>
-            <td ><%= ar.categoria %></td>
-    <% } %>
-        </tbody>
-    </table>
-    </section>
+<div class = "container">
+    <div class="row">
+                <%  Art.map ((A) =>{ %>
+                    <div class="card">
+                            <div class="card-body">
+                                <p><% A[].nombre  %></p>
+                            ></div>
+                    </div>
+                    <% }) %>
+    </div>
+</div>

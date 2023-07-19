@@ -13,6 +13,7 @@ async function SearchName(req, res) {
   console.log(name);
   const db = client.db("supermercado");
   const Art = await db.collection("supermercado").find({ nombre: name }).toArray();
+  console.log(JSON.stringify(Art));
   await disconnectFromMongoDB();
   !Art
     ? res
