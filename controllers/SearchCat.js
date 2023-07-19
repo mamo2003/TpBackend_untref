@@ -20,7 +20,7 @@ async function SearchCat(req, res) {
         .send(
           `no es posible encontrar un producto en esta categoria: ${categoria}, intentalo nuevamente`
         )
-    : res.render("pages/super", { Art: JSON.stringify(Art) });
+    : res.render("pages/table", { Art: Art }); 
 }
 
 module.exports = { SearchCat };

@@ -3,8 +3,11 @@
                 <%  Art.map ((A) =>{ %>
                     <div class="card">
                             <div class="card-body">
-                                <p><%- [A].nombre  %></p>
-                            ></div>
+                                <p><%- A.nombre  %></p>
+                                <p>nombre: <%- A.nombre  %></p>
+                                <p>precio: <%- A.precio %></p>
+                                <p>categoria: <%- A.categoria  %></p>
+                            </div>
                     </div>
                     <% }) %>
     </div>

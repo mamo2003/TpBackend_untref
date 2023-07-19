@@ -16,15 +16,15 @@ async function SearchName(req, res) {
     .collection("supermercado")
     .find({ nombre: { $regex: superName, $options: "i" } })
     .toArray();
-  console.log(JSON.stringify(Art));
+  console.log(JSON.stringify(Art)); 
   await disconnectFromMongoDB();
   !Art
     ? res
         .status(404)
         .send(
-          `no es posible encontrar un producto en esta categoria: ${name}, intentalo nuevamente`
+          `no es posible encontrar un producto en esta categoria: ${superName}, intentalo nuevamente`
         )
-    : res.render("pages/super", { Art: JSON.stringify(Art) });
+    : res.render("pages/table", { Art: Art });
 }
 
 module.exports = { SearchName};
