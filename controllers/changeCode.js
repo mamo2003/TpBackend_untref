@@ -5,7 +5,7 @@ async function changeCode (req, res) {
     if (!nuevoDato) {res.status(400).send("error de formato recibido para nuevos datos");};
 
     const client = await connectToMongoDB();
-    if (!client) {res.status(500).send("erro al conectarse a mongoDB");};
+    if (!client) {res.status(500).render("pages/err");};
     const collection = client.db("supermercado").collection("supermercado");
     collection.updateOne({codigo: parseInt(codigo)},{$set: nuevoDato})
     .then(() => {
