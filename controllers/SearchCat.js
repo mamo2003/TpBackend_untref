@@ -14,10 +14,10 @@ async function SearchCat(req, res) {
   const db = client.db("supermercado");
   const Art= await db.collection("supermercado").find({ categoria:categoria}).toArray();
   await disconnectFromMongoDB();
-  !Art
-    ? res
-        .status(404)
-        .render("pages/err")
+  Art.length === 0
+    ? res.status(404).render("pages/err3", {
+        noname: `no es posible encontrar un producto con la categoria: ${superCat}, intentalo nuevamente`,
+      })
     : res.render("pages/table", { Art: Art }); 
 }
 

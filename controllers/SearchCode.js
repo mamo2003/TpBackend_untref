@@ -14,7 +14,7 @@ async function SearchCode (req, res) {
     ? res
         .status(404)
         .render(
-          "pages/err2",{cuco:
+          "pages/err3",{noname:
           `no es posible encontrar un producto con el codigo: ${superId}, intentalo nuevamente`}
         )
     : res.render("pages/super", { Art: Art });  

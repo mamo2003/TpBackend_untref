@@ -18,13 +18,16 @@ async function SearchName(req, res) {
     .toArray();
   console.log(JSON.stringify(Art)); 
   await disconnectFromMongoDB();
-  !Art
+  Art.length === 0
     ? res
         .status(404)
-        .render("pages/err2", {
-          noname: `no es posible encontrar un producto con este nombre: ${superName}, intentalo nuevamente`
-        })
-    : res.render("pages/table", { Art: Art });
+        .render("pages/err3", {
+    noname: `no es posible encontrar un producto con el nombre: ${superName}, intentalo nuevamente`,
+  })
+/*         .send(
+          `no es posible encontrar un producto con este nombre: ${superName}, intentalo nuevamente`
+        ) */
+    : res.render("pages/table", { Art: Art })
 }
 
 module.exports = { SearchName};
